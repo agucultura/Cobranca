@@ -1,4 +1,5 @@
 PRD01 - MENU
+Autor: Boris
 VERSÃO 1.0
 NOME DA PAGINA: cob-menu.php
 
