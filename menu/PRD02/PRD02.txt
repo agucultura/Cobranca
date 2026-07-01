@@ -1,0 +1,90 @@
+PRD02 - MENU
+VERSÃO 1.0
+NOME DA PAGINA: cob-menu.php
+
+
+Criar uma pagina cob-menu.php que tenha os seguintes requisitos:
+
+SER RESPONSIVA.
+USAR: HTML5 SEMÂNTICO, CSS3 e PHP serão criados no mesmo arquivo.
+USAR O mínimo de css possivel. 
+NÃO USAR CSS INLINE.
+Mesmo css para todos os botões.
+Separar Html da logica.
+
+
+CABEÇALHO:
+O cabeçalho será composto por duas faixas fundos verdes.
+A faixa 01, fundo verde '#68BD4F', escrito em branco, Escrito Nome da Plataforma que vem de $_SESSION[´plataforma´], alinhado pela esquerda, padding:25px, font-size:16px.
+Abaixo escrito o nome do usuário que veio em $_SESSION[´nome´]
+A faixa 02, fundo verde 'green', escrito em branco, Escrito Nome do Sistema que vem de $_SESSION[´sistema´], centralizado,  padding:5px, font-size:35px, font-weight:550;
+
+CORPO:
+No corpo da pagina, fundo AZUL CLARO. 
+DEVERÁ CABER EM UMA UNICA PAGINA SEM A NECESSIDADE DE ROLAR.
+NO CORPO DA PAGINA TERÁ 10 BOTÕES DE (2 EM 2) UM ABAIXO DO OUTRO - CENTRALIZADOS DE MESMO TAMANHO.
+OU SEJA:
+BOTÃO 1 E 2 UM DO LADO DO OUTRO;
+ABAIXO
+BOTAO 3 E 4 UM DO LADO DO OUTRO;
+ABAIXO 
+BOTAO 5 E 6 UM DO LADO DO OUTRO;
+ABAIXO 
+BOTAO 7 E 8 UM DO LADO DO OUTRO;
+ABAIXO 
+BOTAO 9 E 10 UM DO LADO DO OUTRO;
+
+
+BOTÃO 1 - "Dados Cadastrais" 
+BOTÃO 2 - "Habilitar Uso"
+BOTÃO 3 - "Clientes/Carteira"
+BOTÃO 4 - "Gerar Cobranças"
+BOTÃO 5 - "Resumo Geral"
+BOTÃO 6 - "Resumo por Clientes"
+BOTÃO 7 - "Cobranças"
+BOTÃO 8 - "Recebimentos"
+BOTÃO 9 - "Inadimplencias"
+BOTÃO 10 - "Voltar"
+  
+Não tem botão de sair.
+
+
+FORMATAÇÃO, MASCARA E VALIDAÇÃO DOS IMPUTS:
+
+O mínimo de css possivel.
+Mesmo css para todos os botões.
+BOTÕES CENTRALIZADOS, COR VERDE, HOVER LARANJADO, BORDAS ARREDEONDADAS.
+
+Mensagens, centralizadas, font-size 18px, cor laranja.
+
+
+LOGICA:
+
+BOTÃO 1 chama cob-cadastro.php
+BOTÃO 2 chama cob-habilitar.php
+BOTÃO 3 chama cob-clientes.php
+BOTÃO 4 chama cob-gerarcob.php
+BOTÃO 5 chama cob-resgeral.php
+BOTÃO 6 chama cob-rescliente.php
+BOTÃO 7 chama cob-cobranças.php
+BOTÃO 8 chama cob-recebimentos.php
+BOTÃO 9 chama cob-inadimplencias.php
+BOTÃO 10 chama index.php
+
+
+GERENCIAMENTO DE SESSÃO SEGURO:
+
+BLOQUEAR ACESSO SEM LOGIN com $_SESSION[´contad´]
+
+Configuração do Cookie: Antes de iniciar a sessão, configure os parâmetros do cookie para impedir o roubo de sessões por scripts maliciosos (XSS):
+session_start([
+    'cookie_lifetime' => 0, // Expira quando fechar o navegador
+    'cookie_secure' => true, // Apenas via HTTPS
+    'cookie_httponly' => true, // Bloqueia acesso via JavaScript
+    'cookie_samesite' => 'Lax' // Protege contra CSRF
+]);
+
+
+
+
+
